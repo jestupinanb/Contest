@@ -24,4 +24,3 @@ int main()
 	}
 	std::cout << max;
 }
-
