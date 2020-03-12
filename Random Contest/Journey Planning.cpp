@@ -2,24 +2,26 @@
 #include <bits/stdc++.h>
 #include <vector>
 
-long long lcs(std::vector<int> b, int t, int i, int n) {
-	long long max = 0;
-	if (i == n) return 0;
-	if (t == -1) return std::max(lcs(b, t, i + 1, n), b[i] + lcs(b, i, i + 1, n));
-	if (t - i != b[t] - b[i])
-		max = b[i]+lcs(b, i, i + 1, n);
-	long long temp = lcs(b, t, i + 1, n);
-	if (temp > max) max = temp;
-	return max;
-}
-
 int main()
 {
 	int n;
 	std::cin >> n;
-	std::vector<int> b(n);
-	for (int i = 0; i < n; i++) {
+	std::vector<int> b(n + 1);
+	std::vector<int> cb(n + 1);
+	std::map<int, long long> mp;
+	for (int i = 1; i <= n; i++) {
 		std::cin >> b[i];
+		cb[i] = i - b[i];
+		mp[cb[i]] += b[i];
 	}
-	std::cout << lcs(b, -1, 0, n);
+	long long max = 0;
+	int cbmax = 0;
+	for (std::map<int, long long>::iterator it = mp.begin(); it != mp.end(); it++) {
+		if (it->second > max) {
+			max = it->second;
+			cbmax = it->first;
+		}
+	}
+	std::cout << max;
 }
+
