@@ -1,4 +1,4 @@
-//https://codeforces.com/contest/1332/problem/A
+//https://codeforces.com/contest/1332/problem/B
 #include <bits/stdc++.h>
 
 int main() {
