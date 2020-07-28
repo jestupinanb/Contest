@@ -1,15 +1,22 @@
-//https://codeforces.com/problemset/problem/1311/C
-#include <bits/stdc++.h>
-
-int main()
-{
-	#ifdef LOCAL_JUDGE
-		freopen("in.txt", "rt", stdin);
-		freopen("out.txt", "wt", stdout);
-	#endif
-	freopen("in.txt", "wt", stdout);
-	std::cout<<111000<<std::endl;
-	for(int i=0;i<111000;i++){
-		std::cout<<i<<" ";
-	}
-}
+// CPP program to find factorial of large  
+// number using boost library. 
+#include <bits/stdc++.h> 
+#include <boost/multiprecision/cpp_int.hpp> 
+using boost::multiprecision::cpp_int; 
+using namespace std; 
+  
+cpp_int Factorial(int number) 
+{ 
+    cpp_int num = 1; 
+    for (int i = 1; i <= number; i++) 
+        num = num * i; 
+    return num; 
+} 
+  
+int main() 
+{ 
+    int number = 100; 
+    cpp_int fact = Factorial(number); 
+    cout << fact << endl; 
+    return 0; 
+} 
