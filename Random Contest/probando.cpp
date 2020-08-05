@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 
 int main() {
-	std::cout<<(3%1);
+	std::cout<<'w'-119;
 	return 0;
 }

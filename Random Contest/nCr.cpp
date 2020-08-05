@@ -3,7 +3,7 @@
 
 const int e9 = 1e9+7;
 
-std::vector<std::vector<int>> arr;
+std::vector< std::vector<int> > arr;
 
 int c(long long n, long long r) {
 	if (n == r || r == 0) return 1;
