@@ -1,3 +1,4 @@
+//https://practice.geeksforgeeks.org/problems/painting-the-fence/0
 #include <bits/stdc++.h>
 
 int MOD_VAL = 1e9 + 7;
@@ -10,6 +11,7 @@ std::pair<long long, long long> paintingFence(int n, int k) {
 	return std::pair<long long, long long>(sol.second, ((k - 1) * (sol.first + sol.second) % MOD_VAL) % MOD_VAL);
 }
 */
+
 int main()
 {
 	int t;	
