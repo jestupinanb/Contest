@@ -23,7 +23,7 @@ int main()
 			dp[i][j] = a[i] & b[j];
 		}
 	}
-
+	
 	int rta = -1;
 	
 	for (int k = 0; k < 512 && rta == -1; k++)
