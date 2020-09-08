@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 
-int main()
-{
-	std::cout<<((-13)%5)<<'\n';
+int main(){
+	std::cout<<(100.54*10);
 }
