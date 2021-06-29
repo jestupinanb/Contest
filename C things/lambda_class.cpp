@@ -17,6 +17,7 @@ public:
         return p1.second.back()>p2.second.back();
     };
     */
+    //define the lambda function
     function<bool(int,int)> cmp = [&](int v1, int v2) {return v1 < v2; };
 
     //priority_queue<pair<int,list<int>>,vector<pair<int,list<int>>>,decltype(cmp)> pq;
@@ -25,6 +26,7 @@ public:
     int pos = 0;
 
     FreqStack() {
+	//use the lambda function in the constructor of the priority_queue
         pq = decltype(pq)(cmp);
     }
 
